@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playwright Locator Practice</title>
+    <style>
+        body{
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        .form-group{
+            margin-bottom: 15px;
+        }
+
+        input{
+            width: 300px;
+            padding: 8px;
+        }
+
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- getByText -->
+    <h1>Automation Testing Practice</h1>
+
+    <!-- getByRole -->
+    <h2>GUI Elements</h2>
+
+    <!-- getByAltText -->
+    <img 
+        src="https://dummyimage.com/200x100/000/fff.png&text=Logo"
+        alt="nopCommerce demo store"
+    >
+
+    <hr>
+
+    <!-- getByLabel -->
+    <div class="form-group">
+        <label for="name">Name:</label><br>
+        <input 
+            type="text"
+            id="name"
+            placeholder="Enter Name"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label><br>
+        <input 
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone:</label><br>
+        <input 
+            type="text"
+            id="phone"
+            placeholder="Enter Phone"
+        >
+    </div>
+
+    <!-- getByPlaceholder -->
+    <div class="form-group">
+        <input 
+            type="text"
+            placeholder="Select an item"
+        >
+    </div>
+
+    <!-- getByTitle -->
+    <button title="Submit Button">
+        Submit
+    </button>
+
+    <br><br>
+
+    <!-- getByTestId -->
+    <button data-testid="login-btn">
+        Login
+    </button>
+
+</body>
+</html>
