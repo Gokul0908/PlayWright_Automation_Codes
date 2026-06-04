@@ -1,4 +1,4 @@
 {
     "chat.agent.enabled": true,
-    "chat.disableAIFeatures": true
+    // "chat.disableAIFeatures": true    //false
 }
