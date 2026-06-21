@@ -1,0 +1,37 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+    await page.goto('https://testautomationpractice.blogspot.com/');
+    await page.getByRole('textbox', { name: 'Enter Name' }).click();
+    await page.getByRole('textbox', { name: 'Enter Name' }).fill('Gok\'s');
+    await page.waitForTimeout(1234);
+    await page.getByRole('textbox', { name: 'Enter EMail' }).click();
+    await page.getByRole('textbox', { name: 'Enter EMail' }).fill('gokul.selvarasu@gmail.com');
+    await page.waitForTimeout(1234);
+    await page.getByRole('textbox', { name: 'Enter Phone' }).click();
+    await page.getByRole('textbox', { name: 'Enter Phone' }).click();
+    await page.getByRole('textbox', { name: 'Enter Phone' }).fill('123456789');
+    await page.waitForTimeout(1234);
+    await page.getByRole('radio', { name: 'Male', exact: true }).check();
+    await page.getByRole('checkbox', { name: 'Tuesday' }).check();
+    await page.getByRole('checkbox', { name: 'Wednesday' }).check();
+    await page.waitForTimeout(1234);
+    await page.getByLabel('Country:').selectOption('france');
+    await page.getByLabel('Colors:').selectOption('red');
+    await page.getByLabel('Colors:').selectOption('green');
+    await page.getByLabel('Sorted List:').selectOption('cat');
+    await page.getByLabel('Sorted List:').selectOption('cheetah');
+    await page.waitForTimeout(1234);
+    await page.getByLabel('Sorted List:').selectOption('deer');
+    await page.locator('#datepicker').click();
+    await page.getByTitle('Next').click();
+    await page.getByTitle('Next').click();
+    await page.getByRole('link', { name: '9', exact: true }).click();
+    await page.locator('#txtDate').click();
+    await page.getByLabel('Select month').selectOption('7');
+    await page.getByLabel('Select year').selectOption('2021');
+    await page.waitForTimeout(1234);
+    await page.getByRole('link', { name: '9', exact: true }).click();
+    await page.waitForTimeout(1234);
+    await page.close();
+});

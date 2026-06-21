@@ -1,4 +1,4 @@
-; import { test, expect, Locator } from '@playwright/test';
+import { test, expect, Locator } from '@playwright/test';
 
 test("Practice Actions", async ({ page }) => {
 
@@ -45,7 +45,7 @@ test.only("Practice Check Boxes Actions", async ({ page }) => {
     //     await page.waitForTimeout(500);
     // }
 
-    const days:String[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const days: String[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
     for (let i = 0; i < daysOfWeek.length; i++) {
         const checkBox = page.getByLabel(daysOfWeek[i]);

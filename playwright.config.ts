@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -13,23 +14,48 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+
+  // grep:/@sanity/,
+  // grepInvert:/@regression/,
+
+  //default timeout for entire test
+  timeout: 25000,  //32sec       //By Gok's
+  //default assertion  timeout for entire test
+  expect: { timeout: 6789 },    //By Gok's
+
+
   /* Run tests in files in parallel */
   fullyParallel: true,
+
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  // retries: process.env.CI ? 2 : 0,
+
+  /* Retry on manually when test get failed */
+  // retries: 4,
+
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  // workers: process.env.CI ? 1 : undefined,
+  workers: 5,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+
+
+    //Screenshots
+    screenshot: 'only-on-failure',   //By Gok's
+    // video: 'retain-on-failure',    //By Gok's
+
+
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',  //By Gok's
+
+
     testIdAttribute: 'data-pw',
   },
 
