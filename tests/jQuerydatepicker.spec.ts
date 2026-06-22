@@ -61,7 +61,7 @@ test("Pratice JQuery Date Picker", async ({ page }) => {
 
 
 
-test.only("Select dropdown Date Picker", async ({ page }) => {
+test("Select dropdown Date Picker", async ({ page }) => {
 
 
     await page.goto("https://testautomationpractice.blogspot.com/")

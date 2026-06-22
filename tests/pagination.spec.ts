@@ -54,7 +54,7 @@ test("Verifying the dropDown", async ({ page }) => {
     await page.waitForTimeout(2567);
 });
 
-test.only("Verifying the value", async ({ page }) => {
+test("Verifying the value", async ({ page }) => {
 
     await page.goto("https://practice.expandtesting.com/dynamic-pagination-table");
     await page.locator("//input[@type='search']").fill("Florida");

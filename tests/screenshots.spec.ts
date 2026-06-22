@@ -23,7 +23,7 @@ test("Pratice Screenshots", async ({ page }) => {
 
 
 //checking failure screenshot in config file
-test.only("Practice Actions", async ({ page }) => {
+test("Practice Actions", async ({ page }) => {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
 
