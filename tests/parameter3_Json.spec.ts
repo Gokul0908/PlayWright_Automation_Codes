@@ -1,5 +1,6 @@
+/// <reference types="node" />
 import { test, expect } from '@playwright/test'
-import fs from 'fs';
+import * as fs from 'fs';
 
 const jsonPath = 'testData/testData.json';
 const testData: any = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));

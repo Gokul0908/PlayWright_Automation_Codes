@@ -37,9 +37,21 @@ export default defineConfig({
 
   /* Opt out of parallel tests on CI. */
   // workers: process.env.CI ? 1 : undefined,
-  workers: 5,
+  workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  // reporter: 'html',
+// reporter: 'line'
+// reporter: 'dot',
+
+
+  reporter: [
+    ['html', { open: 'always', outputFolder: './Failure_Reports' }],  //By Gok's
+    // ['list'],  //By Gok's
+    // ['junit', { outputFile: 'test-results/results.xml' }],  //By Gok's
+    // ['json', { outputFile: 'test-results/results.json' }],  //By Gok's
+  ],
+
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 
