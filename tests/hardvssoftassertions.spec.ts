@@ -21,7 +21,7 @@ test("Pratice Hard vs Soft Assertions", async ({ context }) => {
 
     //  //Hard Assertions
     await expect.soft(page).toHaveURL("https://playwright.dev/docs/test-timeouts");
-    await expect.soft(page).toHaveTitle("Timeouts | Playwright--------");
+    await expect.soft(page).toHaveTitle("Timeouts | Playwright");
 
     const logo = page.locator("//img[@alt='Playwright logo']");
     await expect.soft(logo).toBeVisible();
