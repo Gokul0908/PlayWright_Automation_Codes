@@ -15,7 +15,7 @@ test("Pratice popup windows handles", async ({ browser }) => {
 })
 
 
-test.only("Pratice authanticated popup windows", async ({ }) => {
+test("Pratice authanticated popup windows", async ({ }) => {
 
     const browser = await chromium.launch();
     const context = await browser.newContext({ httpCredentials: { username: 'admin', password: 'admin' } }); // another way to pass login credentials

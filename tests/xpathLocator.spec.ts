@@ -1,8 +1,8 @@
-import { test, expect, Locator} from '@playwright/test';
+import { test, expect, Locator } from '@playwright/test';
 
 test("Verifying locators in Playwright", async ({ page }) => {
     await page.goto('https://www.flipkart.com/');
-await page.locator("//span[@class='b3wTlE']").click();
+    await page.locator("//span[@class='b3wTlE']").click();
     await page.locator("(//input[@type='text'])[1]").fill("Watch");
     await page.keyboard.press("Enter");
     //absolute xpath
@@ -47,7 +47,7 @@ await page.locator("//span[@class='b3wTlE']").click();
     //xpath with union
     const unionLocator: Locator = page.locator("xpath=//a[contains(@href,'black')] | //a[contains(@href,'blue')]");
     await expect(unionLocator).toBeVisible();
-        //xpath with not
+    //xpath with not
     const notLocator: Locator = page.locator("xpath=//a[contains(@href,'black') and not(contains(@href,'blue'))]");
     await expect(notLocator).toBeVisible();
     //xpath with position
@@ -57,7 +57,7 @@ await page.locator("//span[@class='b3wTlE']").click();
     //xpath with last
     const lastLocator: Locator = page.locator("xpath=(//a[contains(@href,'black')])[last()]");
     await expect(lastLocator).toBeVisible();
-        //xpath with count
+    //xpath with count
     const count: number = await page.locator("xpath=//a[contains(@href,'black')]").count();
     console.log("Count of elements with href containing 'black': " + count);
 
@@ -67,14 +67,14 @@ await page.locator("//span[@class='b3wTlE']").click();
 
     //xpath with string function
     const string: string = await page.locator("xpath=//a[contains(@href,'black')]").evaluateAll(elements => elements.map(element => element.textContent).join(', '));
-    console.log("Text content of elements with href containing 'black': " + string);    
+    console.log("Text content of elements with href containing 'black': " + string);
 
     //xpath with number function
-    const number: number = await page.locator("xpath=//a[contains(@href,'black')]").evaluateAll(elements => elements.length);   
+    const number: number = await page.locator("xpath=//a[contains(@href,'black')]").evaluateAll(elements => elements.length);
     console.log("Number of elements with href containing 'black': " + number);
 
     //xpath with boolean function
-    const boolean: boolean = await page.locator("xpath=//a[contains(@href,'black')]").evaluateAll(elements => elements.length > 0);   
+    const boolean: boolean = await page.locator("xpath=//a[contains(@href,'black')]").evaluateAll(elements => elements.length > 0);
     console.log("Are there any elements with href containing 'black'? " + boolean);
 
     //xpath with date function
@@ -100,6 +100,6 @@ await page.locator("//span[@class='b3wTlE']").click();
     //dynamic xpath
     const dynamicLocator: Locator = page.locator("xpath=//a[contains(@href,'black') and contains(text(),'GODFATHER')]");
     await expect(dynamicLocator).toBeVisible();
-    
+
 
 });

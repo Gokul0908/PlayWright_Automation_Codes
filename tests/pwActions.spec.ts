@@ -29,7 +29,7 @@ test("Practice Radio Actions", async ({ page }) => {
 });
 
 
-test.only("Practice Check Boxes Actions", async ({ page }) => {
+test("Practice Check Boxes Actions", async ({ page }) => {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
 
