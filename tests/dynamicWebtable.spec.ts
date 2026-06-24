@@ -1,7 +1,6 @@
 import { test, expect, Locator } from "@playwright/test";
 
 
-
 test("Checking the Dynamic table values", async ({ page }) => {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
