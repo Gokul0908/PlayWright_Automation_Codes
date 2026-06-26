@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests/pratices_Playwright',
+  testDir: './tests/pratices',
 
   // grep:/@sanity/,
   // grepInvert:/@regression/,
@@ -40,8 +40,8 @@ export default defineConfig({
   workers: 1,  //By Gok's
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: 'html',
-// reporter: 'line'
-// reporter: 'dot',
+  // reporter: 'line'
+  // reporter: 'dot',
 
 
   reporter: [
