@@ -45,7 +45,7 @@ export default defineConfig({
 
 
   reporter: [
-    ['html', { open: 'always', outputFolder: './Failure_Reports' }],  //By Gok's
+    ['html', { open: 'never', outputFolder: './Failure_Reports' }],  //By Gok's
     // ['list'],  //By Gok's
     // ['junit', { outputFile: 'test-results/results.xml' }],  //By Gok's
     // ['json', { outputFile: 'test-results/results.json' }],  //By Gok's

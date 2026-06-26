@@ -12,10 +12,10 @@ test("Practice all", async () => {
     const text = page.getByRole('heading', { name: 'Practice Page' });
     await expect(text).toBeVisible();
 
-    const Radio1 = page.getByLabel('Radio1');
-    const r1 = await Radio1.isChecked();
+    const Radio2 =page.getByLabel('radio2');
+    const r1 = await Radio2.isChecked();
     if (!r1) {
-        await Radio1.check();
+        await Radio2.check();
     }
 
     await browser.close();
