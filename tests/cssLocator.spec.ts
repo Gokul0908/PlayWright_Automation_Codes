@@ -14,4 +14,8 @@ test("CSS Locator Test", async ({ page }) => {
     const stop: Locator = elementByClass.getByText('STOP');
     // await expect(stop).toBeVisible();
     console.log("Element with text 'STOP' is visible: " + stop);
+
+    page.waitForLoadState('load');
+
+    
 });
