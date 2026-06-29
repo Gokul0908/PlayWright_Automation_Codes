@@ -8,7 +8,7 @@ test("Verifying the page title", async ({ page }) => {
     await expect(page).toHaveTitle(/Automation Testing Practice/);
 });
 
-test("Verifying the page url", async ({ page }) => {
+test("Verifying the page url ", async ({ page }) => {
     await page.goto('https://testautomationpractice.blogspot.com/');
     let url = await page.url();
     console.log("The URL is: " + url);

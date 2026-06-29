@@ -5,6 +5,7 @@ import { test, expect, Locator } from "@playwright/test"
 
 test("Pratice Dialog Handler", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
+    
     page.once("dialog", async (dialog) => {
         console.log("The Dialog type is ==>" + dialog.type());
         expect(dialog.type()).toContain("alert");
