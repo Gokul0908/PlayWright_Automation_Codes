@@ -1,4 +1,4 @@
-import { test, expect, chromium } from "@playwright/test"
+import { test, chromium } from "@playwright/test"
 
 
 test("Pratice handle new tabs", async () => {
