@@ -14,6 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests/pratices',
+  // testDir: './tests/basics',
 
   // grep:/@sanity/,
   // grepInvert:/@regression/,

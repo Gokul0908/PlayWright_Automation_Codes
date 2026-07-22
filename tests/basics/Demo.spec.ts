@@ -10,7 +10,7 @@ test("Verifying the page title", async ({ page }) => {
 
 test("Verifying the page url ", async ({ page }) => {
     await page.goto('https://testautomationpractice.blogspot.com/');
-    let url = await page.url();
+    let url = page.url();
     console.log("The URL is: " + url);
     await expect(page).toHaveURL(/testautomationpractice\.blogspot\.com/);
 });

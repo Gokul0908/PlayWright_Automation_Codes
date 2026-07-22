@@ -2,7 +2,7 @@ import { test, chromium, expect } from "@playwright/test";
 
 
 
-test("Pratice popup windows handles", async ({ browser }) => {
+test.only("Pratice popup windows handles", async ({ browser }) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -10,6 +10,8 @@ test("Pratice popup windows handles", async ({ browser }) => {
 
     await Promise.all([page.waitForEvent('popup'), await page.locator("#PopUp").click()]);
     console.log("The Total no of pages ", context.pages().length);
+
+    console.log("The Total no of pages url ", context.pages()[1].url());
     await page.waitForTimeout(2567);
 
 })
