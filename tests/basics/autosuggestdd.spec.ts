@@ -21,7 +21,6 @@ test("Auto suggestion Drop down", async ({ page }) => {
 
     for (let index = 0; index < optioncount; index++) {
         console.log("The " + index + " Auto suggestion  is :: " + await List.nth(index).innerText());
-
     }
 
 });
